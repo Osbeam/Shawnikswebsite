@@ -1,0 +1,35 @@
+.tab-navigation {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.input-form {
+    width: 100%;
+    max-width: 300px;
+    padding: 8px;
+    border-radius: 4px;
+    outline: none;
+    border-color: white;
+    margin-bottom: 20px;
+}
+
+.tab-navigation button {
+    width: 100px;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: steelblue;
+}
+
+.tab-content h3 {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .input-form {
+        width: 80%;
+        max-width: none;
+    }
+}
