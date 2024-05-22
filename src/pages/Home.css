@@ -149,6 +149,7 @@
   margin: 0 15px;
   font-size: 3em;
   border-radius: 8px;
+  color: white !important;
 }
 
 .rec.rec-arrow.rec.rec-arrow-left {

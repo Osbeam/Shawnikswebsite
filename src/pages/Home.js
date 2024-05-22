@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import axios from 'axios';
+import { toast,ToastContainer  } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import "bootstrap/dist/css/bootstrap.css";
 import {
   faFacebook,
@@ -57,8 +60,59 @@ export default function Home() {
   const [emi, setEmi] = useState(0);
   const [totalPayment, setTotalPayment] = useState(0);
   const [totalInterest, setTotalInterest] = useState(0);
-
   const [isCollapsed, setIsCollapsed] = useState(true);
+
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phoneNumber: '',
+    subject: '',
+    message: ''
+  });
+  
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.id]: e.target.value });
+  };
+  
+
+  const handleSubjectChange = (e) => {
+    setFormData({ ...formData, subject: e.target.value });
+  };
+
+  //handle submit for contact form
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      // Transforming field names to match backend expectations
+      const transformedFormData = {
+        FirstName: formData.firstName,
+        LastName: formData.lastName,
+        PhoneNumber: formData.phoneNumber,
+        Email: formData.email,
+        Subject: formData.subject,
+        Message: formData.message
+      };
+      
+      const response = await axios.post('http://77.37.45.224:5000/api/form/contactForm', transformedFormData);
+      console.log('Form submitted successfully:', response.data);
+      // Show toast notification
+      toast.success('Thank you! We will contact you soon.');
+      // Reset form after successful submission
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phoneNumber: '',
+        subject: '',
+        message: ''
+      });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+    }
+  };
+  
+
 
   const handleToggle = () => {
     setIsCollapsed(!isCollapsed);
@@ -183,7 +237,7 @@ export default function Home() {
                   <img className="card-icon1" src={PL} alt="..." />
                 </div>
                 <div className="card-body">
-                  <h5 className="card-title text-center mt-3">Personal Loan</h5>
+                  <h5 className="card-title text-center mt-4">Personal Loan</h5>
                   <p className="card-text">
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
@@ -194,24 +248,10 @@ export default function Home() {
             <div className="col-md-4 col-lg-2 mb-5 mt-4">
               <div className="card" style={{ backgroundColor: "#AAD9D1" }}>
                 <div className="img-container">
-                  <img className="card-icon1" src={PL} alt="..." />
+                  <img className="card-icon1" src={CR} alt="..." />
                 </div>
                 <div className="card-body">
-                  <h5 className="card-title text-center mt-3">Personal Loan</h5>
-                  <p className="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-4 col-lg-2 mb-5 mt-4">
-              <div className="card" style={{ backgroundColor: "#AAD9D1" }}>
-                <div className="img-container">
-                  <img className="card-icon2" src={BL} alt="..." />
-                </div>
-                <div className="card-body">
-                  <h5 className="card-title text-center mt-3">Business Loan</h5>
+                  <h5 className="card-title text-center mt-4">Credit Card </h5>
                   <p className="card-text">
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
@@ -225,7 +265,7 @@ export default function Home() {
                   <img className="card-icon2" src={BL} alt="..." />
                 </div>
                 <div className="card-body">
-                  <h5 className="card-title text-center mt-3">Business Loan</h5>
+                  <h5 className="card-title text-center mt-4">Business Loan</h5>
                   <p className="card-text">
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
@@ -236,10 +276,10 @@ export default function Home() {
             <div className="col-md-4 col-lg-2 mb-5 mt-4">
               <div className="card" style={{ backgroundColor: "#AAD9D1" }}>
                 <div className="img-container">
-                  <img className="card-icon2" src={BL} alt="..." />
+                  <img className="card-icon2" src={HL} alt="..." />
                 </div>
                 <div className="card-body">
-                  <h5 className="card-title text-center mt-3">Business Loan</h5>
+                  <h5 className="card-title text-center mt-4">Home Loan</h5>
                   <p className="card-text">
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
@@ -250,10 +290,24 @@ export default function Home() {
             <div className="col-md-4 col-lg-2 mb-5 mt-4">
               <div className="card" style={{ backgroundColor: "#AAD9D1" }}>
                 <div className="img-container">
-                  <img className="card-icon2" src={BL} alt="..." />
+                  <img className="card-icon2" src={LAP} alt="..." />
                 </div>
                 <div className="card-body">
-                  <h5 className="card-title text-center mt-3">Business Loan</h5>
+                  <h5 className="card-title text-center mt-4">Loan Across Property</h5>
+                  <p className="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-4 col-lg-2 mb-5 mt-4">
+              <div className="card" style={{ backgroundColor: "#AAD9D1" }}>
+                <div className="img-container">
+                  <img className="card-icon2" src={LOC} alt="..." />
+                </div>
+                <div className="card-body">
+                  <h5 className="card-title text-center mt-4">Letter of Credit </h5>
                   <p className="card-text">
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
@@ -743,26 +797,30 @@ export default function Home() {
           </div>
         </div>
         <div className="contactUs-inner2">
-          <form className="contactUs-inner-form">
+        <form className="contactUs-inner-form" onSubmit={handleSubmit}>
             <div className="row">
-              <div className="form-group col-md-6">
-                <label for="inputEmail4">First Name</label>
-                <input
-                  type="text"
-                  className="form-control"
-                  id="inputFirstName"
-                  placeholder="Eg. Jonh "
-                />
-              </div>
-              <div className="form-group col-md-6">
-                <label for="inputPassword4">Last Name</label>
-                <input
-                  type="text"
-                  className="form-control"
-                  id="inputLastName"
-                  placeholder="Eg. Doe"
-                />
-              </div>
+            <div className="form-group col-md-6">
+            <label htmlFor="inputFirstName">First Name</label>
+            <input
+              type="text"
+              className="form-control"
+              id="firstName"
+              value={formData.firstName}
+              onChange={handleChange}
+              placeholder="Eg. John"
+            />
+          </div>
+          <div className="form-group col-md-6">
+            <label htmlFor="inputLastName">Last Name</label>
+            <input
+              type="text"
+              className="form-control"
+              id="lastName"
+              value={formData.lastName}
+              onChange={handleChange}
+              placeholder="Eg. Doe"
+            />
+          </div>
             </div>
             <div style={{ marginTop: "35px" }} className="row">
               <div className="form-group col-md-6">
@@ -770,7 +828,9 @@ export default function Home() {
                 <input
                   type="email"
                   className="form-control"
-                  id="inputEmail4"
+                  id="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   placeholder="Eg. johndoe@gmail.com"
                 />
               </div>
@@ -779,37 +839,68 @@ export default function Home() {
                 <input
                   type="number"
                   className="form-control"
-                  id="inputNumber"
+                  id="phoneNumber"
+                  value={formData.phoneNumber}
+                  onChange={handleChange}
                   placeholder="Eg. 9000000001"
                 />
               </div>
             </div>
             <div style={{ marginTop: "35px" }} className="row">
-              <div className="form-group-radio col">
-                <label for="inputEmail4">Select Subject?</label>
-                <div style={{ marginTop: "10px" }} className="row">
-                  <div className="col-md-4">
-                    <input style={{ marginRight: "10px" }} type="radio" />
-                    <label>Loans</label>
-                  </div>
-                  <div className="col-md-4">
-                    <input style={{ marginRight: "10px" }} type="radio" />
-                    <label>Investments</label>
-                  </div>
-                  <div className="col-md-4">
-                    <input style={{ marginRight: "10px" }} type="radio" />
-                    <label>Insurance</label>
-                  </div>
-                </div>
+          <div className="form-group-radio col">
+            <label htmlFor="inputEmail4">Select Subject?</label>
+            <div style={{ marginTop: "10px" }} className="row">
+              {/* Loans */}
+              <div className="col-md-4">
+                <input
+                  style={{ marginRight: "10px" }}
+                  type="radio"
+                  id="subject"
+                  name="subject"
+                  value="Loans"
+                  onChange={handleSubjectChange}
+                  checked={formData.subject === 'Loans'}
+                />
+                <label>Loans</label>
+              </div>
+              {/* Investments */}
+              <div className="col-md-4">
+                <input
+                  style={{ marginRight: "10px" }}
+                  type="radio"
+                  id="subject"
+                  name="subject"
+                  value="Investments"
+                  onChange={handleSubjectChange}
+                  checked={formData.subject === 'Investments'}
+                />
+                <label>Investments</label>
+              </div>
+              {/* Insurance */}
+              <div className="col-md-4">
+                <input
+                  style={{ marginRight: "10px" }}
+                  type="radio"
+                  id="subject"
+                  name="subject"
+                  value="Insurance"
+                  onChange={handleSubjectChange}
+                  checked={formData.subject === 'Insurance'}
+                />
+                <label>Insurance</label>
               </div>
             </div>
+          </div>
+        </div>
             <div style={{ marginTop: "35px" }} className="row">
               <div className="form-group col">
                 <label for="inputEmail4">Message</label>
                 <input
                   type="text"
                   className="form-control"
-                  id="inputMsg"
+                  id="message"
+                  value={formData.message}
+                  onChange={handleChange}
                   placeholder="Write your message..."
                 />
               </div>
@@ -863,6 +954,7 @@ export default function Home() {
           Copyright © 2024 Shawniks Solutions Pvt. Ltd. All Rights Reserved.
         </h6>
       </div>
+      <ToastContainer />
     </>
   );
 }
