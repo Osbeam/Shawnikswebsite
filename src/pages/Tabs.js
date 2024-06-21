@@ -162,7 +162,7 @@ const Tabs = () => {
             title: "Thank you...",
             content: (
                 <div>
-                </div>
+                </div> 
             ),
         },
     ];

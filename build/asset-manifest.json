@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b1c26b90.css",
+    "main.js": "/static/js/main.619d6d0f.js",
+    "static/media/blogSlide1.png": "/static/media/blogSlide1.33b9a4b0855271146d51.png",
+    "static/media/blogimg.png": "/static/media/blogimg.9d4b27867ab766dd8509.png",
+    "static/media/aboutus1.png": "/static/media/aboutus1.9b6b65698416f50c7015.png",
+    "static/media/aboutUs2.png": "/static/media/aboutUs2.20da5384d3ef22357485.png",
+    "static/media/blogSlide.png": "/static/media/blogSlide.443acf1eb6fcab078f1d.png",
+    "static/media/blogSlide2.png": "/static/media/blogSlide2.ceb640c1339add6fd3b4.png",
+    "static/media/ShawniksLogo.png": "/static/media/ShawniksLogo.22a2e7cd93dd88a96418.png",
+    "static/media/loan-to-value.png": "/static/media/loan-to-value.c479e2400693d6509935.png",
+    "static/media/loan.png": "/static/media/loan.376b156e618d76b875e8.png",
+    "static/media/Contact form bg.png": "/static/media/Contact form bg.56415beed86aa4d21732.png",
+    "static/media/writing.png": "/static/media/writing.af03d590c04489e4e650.png",
+    "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/index.html",
+    "main.b1c26b90.css.map": "/static/css/main.b1c26b90.css.map",
+    "main.619d6d0f.js.map": "/static/js/main.619d6d0f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b1c26b90.css",
+    "static/js/main.619d6d0f.js"
+  ]
+}
