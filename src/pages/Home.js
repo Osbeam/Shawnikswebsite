@@ -3,6 +3,7 @@ import axios from 'axios';
 import { toast,ToastContainer  } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import "bootstrap/dist/css/bootstrap.css";
+import { NavLink } from "react-router-dom";
 import {
   faFacebook,
   faTwitter,
@@ -939,7 +940,7 @@ export default function Home() {
             <li>BLOGS</li>
             <li>CONTACT US</li>
             <li>TERMS & CONDITIONS</li>
-            <li>PRIVACY POLICY</li>
+            <li> <NavLink style={{textDecoration:'none', color:'white'}}  to="/privacy-policy">PRIVACY POLICY</NavLink ></li>
           </ul>
         </div>
       </div>
