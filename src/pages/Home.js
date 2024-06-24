@@ -34,7 +34,7 @@ import aboutUs2 from "../Images/aboutUs2.png";
 import Carousel from "react-elastic-carousel";
 import ToolEmi from "../Images/Tool-emi.png";
 import ToolCebil from "../Images/Tool-cebil.png";
-import ploan from "../Images/Group 77.png";
+import ploan from "../Images/ploan.png";
 import bloan from "../Images/Group 78.png";
 import hloan from "../Images/Group 79.png";
 import laploan from "../Images/Group 80.png";
