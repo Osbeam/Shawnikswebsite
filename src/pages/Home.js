@@ -768,10 +768,10 @@ export default function Home() {
             <div class="contact-info">
               <ul class="custom-list">
                 <li>
-                  <FontAwesomeIcon icon={faPhoneAlt} /> +91 8484052063
+                  <FontAwesomeIcon icon={faPhoneAlt} /> 020-67238610
                 </li>
                 <li>
-                  <FontAwesomeIcon icon={faEnvelope} /> hr@shawniks.com
+                  <FontAwesomeIcon icon={faEnvelope} /> info@shawniks.com
                 </li>
                 <li>
                   <FontAwesomeIcon icon={faMapMarkerAlt} /> Office no B-18, 4th
@@ -781,11 +781,11 @@ export default function Home() {
                 <li>
                   <FontAwesomeIcon icon={faGlobe} />{" "}
                   <a
-                    href="http://www.shawnikssolutions.com"
+                    href="https://www.shawniks.com"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    www.shawnikssolutions.com
+                    www.shawniks.com
                   </a>
                 </li>
               </ul>
