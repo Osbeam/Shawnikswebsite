@@ -240,8 +240,8 @@ export default function Home() {
                 <div className="card-body">
                   <h5 className="card-title text-center mt-4">Personal Loan</h5>
                   <p className="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+                    {/* Some quick example text to build on the card title and make
+                    up the bulk of the card's content. */}
                   </p>
                 </div>
               </div>
@@ -254,8 +254,8 @@ export default function Home() {
                 <div className="card-body">
                   <h5 className="card-title text-center mt-4">Credit Card </h5>
                   <p className="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+                    {/* Some quick example text to build on the card title and make
+                    up the bulk of the card's content. */}
                   </p>
                 </div>
               </div>
@@ -268,8 +268,8 @@ export default function Home() {
                 <div className="card-body">
                   <h5 className="card-title text-center mt-4">Business Loan</h5>
                   <p className="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+                    {/* Some quick example text to build on the card title and make
+                    up the bulk of the card's content. */}
                   </p>
                 </div>
               </div>
@@ -282,8 +282,8 @@ export default function Home() {
                 <div className="card-body">
                   <h5 className="card-title text-center mt-4">Home Loan</h5>
                   <p className="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+                    {/* Some quick example text to build on the card title and make
+                    up the bulk of the card's content. */}
                   </p>
                 </div>
               </div>
@@ -296,8 +296,8 @@ export default function Home() {
                 <div className="card-body">
                   <h5 className="card-title text-center mt-4">Loan Across Property</h5>
                   <p className="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+                    {/* Some quick example text to build on the card title and make
+                    up the bulk of the card's content. */}
                   </p>
                 </div>
               </div>
@@ -310,8 +310,8 @@ export default function Home() {
                 <div className="card-body">
                   <h5 className="card-title text-center mt-4">Letter of Credit </h5>
                   <p className="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+                    {/* Some quick example text to build on the card title and make
+                    up the bulk of the card's content. */}
                   </p>
                 </div>
               </div>
@@ -768,10 +768,10 @@ export default function Home() {
             <div class="contact-info">
               <ul class="custom-list">
                 <li>
-                  <FontAwesomeIcon icon={faPhoneAlt} /> +91 86965 65986
+                  <FontAwesomeIcon icon={faPhoneAlt} /> +91 8484052063
                 </li>
                 <li>
-                  <FontAwesomeIcon icon={faEnvelope} /> demo@gmail.com
+                  <FontAwesomeIcon icon={faEnvelope} /> hr@shawniks.com
                 </li>
                 <li>
                   <FontAwesomeIcon icon={faMapMarkerAlt} /> Office no B-18, 4th
